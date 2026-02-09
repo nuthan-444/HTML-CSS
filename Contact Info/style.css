@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Section */
+.contact {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.contact-box {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Text */
+.title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+/* Social Icons */
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.12);
+  transition: transform 0.4s ease, background 0.4s ease;
+  animation: slideIn 0.8s ease forwards;
+}
+
+.icon i {
+  font-size: 1.6rem;
+}
+
+.icon span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Hover Effects */
+.icon:hover {
+  transform: translateY(-6px) scale(1.03);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Platform Colors */
+.linkedin:hover { background: #0077b5; }
+.github:hover { background: #24292e; }
+.instagram:hover {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+.email:hover { background: #d93025; }
+.twitter:hover { background: #000; }
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
